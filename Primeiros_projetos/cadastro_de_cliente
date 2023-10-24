@@ -41,3 +41,68 @@ class Aplicacao():
 
         self.bt_deletar = Button(self.frame1,text='Deletar',bd=4,bg='LightPink',font=('verdana',10,'bold'))
         self.bt_deletar.place(relx = 0.90,rely=0.675,relwidth=0.1,relheight=0.155)
+
+    def label_frame1(self): 
+        self.lb_cpf = Label(self.frame1,text='CPF',bd=4,font=('verdana',10,'bold'))
+        self.lb_cpf.place(relx=0.0,rely=0.0,relwidth=0.1,relheight=0.11)
+
+        self.lb_telefone = Label(self.frame1,text='Telefone',bd=4,font=('verdana',10,'bold'))
+        self.lb_telefone.place(relx=0.4,rely=0.0,relwidth=0.1,relheight=0.11)
+
+        self.lb_nome = Label(self.frame1,text='Nome',bd=4,font=('verdana',10,'bold'))
+        self.lb_nome.place(relx=0.0,rely=0.14,relwidth=0.1,relheight=0.11)
+
+        self.lb_sobrenome = Label(self.frame1,text='Sobrenome',font=('verdana',10,'bold'))
+        self.lb_sobrenome.place(relx=0.5,rely=0.14,relwidth=0.1,relheight=0.11)
+
+        self.lb_descricao_pessoa = Label(self.frame1,text='Descrição',bd=4,font=('verdana',10,'bold'))
+        self.lb_descricao_pessoa.place(relx=0.0,rely=0.28,relwidth=0.1,relheight=0.11)
+
+        self.lb_endereco = Label(self.frame1,text='Endereço',bd=4,font=('verdana',10,'bold'))
+        self.lb_endereco.place(relx=0.0,rely=0.42,relwidth=0.1,relheight=0.11)
+
+        self.lb_numero = Label(self.frame1,text='Nº',bd=4,font=('verdana',10,'bold'))
+        self.lb_numero.place(relx=0.6,rely=0.42,relwidth=0.05,relheight=0.11)
+
+        self.lb_bairro = Label(self.frame1,text='Bairro',bd=4,font=('verdana',10,'bold'))
+        self.lb_bairro.place(relx=0.0,rely=0.56,relwidth=0.1,relheight=0.11)
+
+        self.lb_cidade = Label(self.frame1,text='Cidade',bd=4,font=('verdana',10,'bold'))
+        self.lb_cidade.place(relx=0.5,rely=0.56,relwidth=0.1,relheight=0.11)
+
+        self.lb_descricao_data = Label(self.frame1,text='Descrição da Data',bd=4,font=('verdana',10,'bold'))
+        self.lb_descricao_data.place(relx=0,rely=0.7,relwidth=0.2,relheight=0.11)
+
+    def entry_frame1(self):
+        self.entry_cpf = Entry(self.frame1)
+        self.entry_cpf.place(relx=0.12,rely=0,relwidth=0.26,relheight=0.11)
+
+        self.entry_telefone = Entry(self.frame1)
+        self.entry_telefone.place(relx=0.52,rely=0,relwidth=0.35,relheight=0.11)
+
+        self.entry_nome = Entry(self.frame1)
+        self.entry_nome.place(relx=0.12,rely=0.14,relwidth=0.36,relheight=0.11)
+
+        self.entry_sobrenome = Entry(self.frame1)
+        self.entry_sobrenome.place(relx=0.62,rely=0.14,relwidth=0.25,relheight=0.11)
+
+        self.entry_descricao_pessoa = Entry(self.frame1)
+        self.entry_descricao_pessoa.place(relx=0.12,rely=0.28,relwidth=0.75,relheight=0.11)
+
+        self.entry_endereco = Entry(self.frame1)
+        self.entry_endereco.place(relx=0.12,rely=0.42,relwidth=0.46,relheight=0.11)
+
+        self.entry_numero = Entry(self.frame1)
+        self.entry_numero.place(relx=0.67,rely=0.42,relwidth=0.2,relheight=0.11)
+
+        self.entry_bairro = Entry(self.frame1)
+        self.entry_bairro.place(relx=0.12,rely=0.56,relwidth=0.36,relheight=0.11)
+
+        self.entry_cidade = Entry(self.frame1)
+        self.entry_cidade.place(relx=0.62,rely=0.56,relwidth=0.25,relheight=0.11)
+
+        self.entry_data_comemorativa = Entry(self.frame1)
+        self.entry_data_comemorativa.place(relx=0.72,rely=0.7,relwidth= 0.15,relheight=0.11)
+
+        self.entry_descricao_data = Entry(self.frame1)
+        self.entry_descricao_data.place(relx = 0.22,rely=0.7,relwidth=0.48,relheight=0.11)
