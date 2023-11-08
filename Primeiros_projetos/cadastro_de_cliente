@@ -1,9 +1,53 @@
 from tkinter import *
 from tkinter import ttk
+import sqlite3
 
 janela = Tk()
 
-class Aplicacao():
+class Funcoes():
+    def __init__(self):
+        self.entry_cpf = None
+
+    def limpar_tela(self):
+        self.entry_cpf.delete(0,END)
+        self.entry_telefone.delete(0,END)
+        self.entry_nome.delete(0,END)
+        self.entry_sobrenome.delete(0,END)
+        self.entry_descricao_pessoa.delete(0,END)
+        self.entry_endereco.delete(0,END)
+        self.entry_numero.delete(0,END)
+        self.entry_bairro.delete(0,END)
+        self.entry_cidade.delete(0,END)
+        self.entry_data_comemorativa.delete(0,END)
+        self.entry_descricao_data.delete(0,END)
+
+    def conexao_bd(self):
+        self.conexao = sqlite3.connect('cliente.bd')
+        self.cursor = self.conexao.cursor()
+    def desconecta_bd(self):
+        self.conexao.close(); print(f'Banco de Dados Desconectado')
+    def montarTabela(self):
+        self.conexao_bd();print(f'Conectado ao Banco de Dados')
+        #Criando a Tabela
+        self.cursor.execute("""
+            CREATE TABLE IF NOT EXISTS clientes(
+                cpf INTEGER(11) NOT NULL PRIMARY KEY,
+                telefone INTEGER(11)NOT NULL,
+                nome TEXT(20) NOT NUll,
+                sobrenome TEXT(20),
+                descricao TEXT(30),
+                endereco TEXT(30),
+                numero VARCHAR(10),
+                bairro TEXT(20),
+                cidade TEXT(20),
+                decricao_data CHAR(40),
+                data_decricao TEXT(10));
+        """)
+
+        self.conexao.commit()
+        self.desconecta_bd()
+
+class Aplicacao(Funcoes):
     def __init__(self):
         self.janela = janela
         self.tela()
@@ -11,6 +55,9 @@ class Aplicacao():
         self.botoes_frame1()
         self.label_frame1()
         self.entry_frame1()
+        self.montarTabela()
+        self.conexao_bd()
+        self.desconecta_bd()
         janela.mainloop()
 
     def tela(self):
