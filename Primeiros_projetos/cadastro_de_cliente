@@ -89,6 +89,7 @@ class Aplicacao(Funcoes):
         self.entry_frame1()
         self.tela_frame2()
         self.conexao_bd()
+        self.montarTabela()
         self.desconecta_bd()
         janela.mainloop()
 
