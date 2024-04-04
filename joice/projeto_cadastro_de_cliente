@@ -1,0 +1,93 @@
+from tkinter import *
+
+root= Tk()
+
+class Aplication():
+    def __init__(self):
+        self.root = root
+        self.personalizacao_tela()
+        self.frame_de_tela()
+        self.label_informacao()
+        self.entry_informacao()
+        root.mainloop()
+
+
+    def personalizacao_tela(self):
+        self.root.title('CADASTRO DE CLIENTES')
+        self.root.configure(background='#AAAAAA')
+        self.root.geometry('900x600')
+
+    def frame_de_tela(self):
+        self.informacao = Frame(self.root,bg='white',highlightbackground='#999888',highlightthickness=3)
+        self.informacao.place(relx=0.02,rely=0.02,relheight=0.52,relwidth=0.96)
+
+        self.visualizacao = Frame(self.root,bg='white',highlightbackground='#999888',highlightthickness=3)
+        self.visualizacao.place(relx=0.02,rely=0.56,relheight=0.4,relwidth=0.96)
+
+    def label_informacao(self):
+        self.label_cpf = Label(self.informacao,text='CPF')
+        self.label_cpf.place(relx=0.02,rely=0.03,relheight=0.1,relwidth=0.1)
+
+        self.label_nome =Label(self.informacao,text='NOME')
+        self.label_nome.place(relx=0.02,rely=0.17,relheight=0.1,relwidth=0.1)
+
+        self.label_apelido = Label(self.informacao,text='APELIDO')
+        self.label_apelido.place(relx=0.02,rely=0.31,relheight=0.1,relwidth=0.1)
+
+        self.label_telefone = Label(self.informacao,text='TELEFONE')
+        self.label_telefone.place(relx=0.37,rely=0.31,relheight=0.1,relwidth=0.1)
+
+        self.endereço = Label(self.informacao,text='ENDEREÇO')
+        self.endereço.place(relx=0.02,rely=0.45,relheight=0.1,relwidth=0.1)
+        
+        self.label_numero = Label(self.informacao,text='NÚMERO')
+        self.label_numero.place(relx=0.02,rely=0.59,relheight=0.1,relwidth=0.1)
+
+        self.label_bairro = Label(self.informacao,text='BAIRRO')
+        self.label_bairro.place(relx=0.3,rely=0.59,relheight=0.1,relwidth=0.1)
+
+        self.label_cidade = Label(self.informacao,text='CIDADE')
+        self.label_cidade.place(relx=0.02,rely=0.73,relheight=0.1,relwidth=0.1)
+
+        self.label_cep = Label(self.informacao,text='CEP')
+        self.label_cep.place(relx=0.4,rely=0.73,relheight=0.1,relwidth=0.1)
+
+        self.label_data_cadastro = Label(self.informacao,text='DATA DO CADASTRO')
+        self.label_data_cadastro.place(relx=0.02,rely=0.87,relheight=0.1,relwidth=0.15)
+
+    def entry_informacao(self):
+        self.entry_cpf = Entry(self.informacao)
+        self.entry_cpf.place(relx=0.14,rely=0.03,relheight=0.1,relwidth=0.2)
+
+        self.entry_nome = Entry(self.informacao)
+        self.entry_nome.place(relx=0.14,rely=0.17,relheight=0.1,relwidth=0.56)
+
+        self.entry_apelido = Entry(self.informacao)
+        self.entry_apelido.place(relx=0.14,rely=0.31,relheight=0.1,relwidth=0.22)
+
+        self.entry_telefone = Entry(self.informacao)
+        self.entry_telefone.place(relx=0.48,rely=0.31,relheight=0.1,relwidth=0.22)
+
+        self.entry_endereço = Entry(self.informacao)
+        self.entry_endereço.place(relx=0.14,rely=0.45,relheight=0.1,relwidth=0.56)
+
+        self.entry_numero = Entry(self.informacao)
+        self.entry_numero.place(relx=0.14,rely=0.59,relheight=0.1,relwidth=0.15)
+
+        self.entry_bairro = Entry(self.informacao)
+        self.entry_bairro.place(relx=0.41,rely=0.59,relheight=0.1,relwidth=0.29)
+
+        self.entry_cidade = Entry(self.informacao)
+        self.entry_cidade.place(relx=0.14,rely=0.73,relheight=0.1,relwidth=0.25)
+
+        self.entry_cep = Entry(self.informacao)
+        self.entry_cep.place(relx=0.51,rely=0.73,relheight=0.1,relwidth=0.19)
+
+        self.entry_data_cadastro = Entry(self.informacao)
+        self.entry_data_cadastro.place(relx=0.19,rely=0.87,relheight=0.1,relwidth=0.51)
+
+
+
+
+Aplication()
+
