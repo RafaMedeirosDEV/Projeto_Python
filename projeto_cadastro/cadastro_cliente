@@ -86,6 +86,11 @@ class Aplication():
         self.entry_data_cadastro = Entry(self.informacao)
         self.entry_data_cadastro.place(relx=0.19,rely=0.87,relheight=0.1,relwidth=0.51)
 
+    def botoes(self):
+        self.buscar =  Button(self.informacao,text='BUSCAR')
+        self.buscar.place(relx=0.7,rely=0.03,relheight=0.1,relwidth=0.14)
+
+
 
 
 
