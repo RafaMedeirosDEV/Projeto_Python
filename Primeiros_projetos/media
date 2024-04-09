@@ -1,5 +1,0 @@
-#media entre 2 números
-num1 = int(input('Digite o primeiro número inteiro:'))
-num2 = int(input('Digite o segundo numero inteiro:'))
-media = ((num1 + num2)/2)
-print(f'A média entre {num1} e {num2} é {media}')
