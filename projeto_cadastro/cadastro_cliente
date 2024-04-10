@@ -9,6 +9,7 @@ class Aplication():
         self.frame_de_tela()
         self.label_informacao()
         self.entry_informacao()
+        self.botoes()
         root.mainloop()
 
 
